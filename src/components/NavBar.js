@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../assets/LOGO CORTINAS.png'
+import CartWidget from './CartWidget'
 
 const NavBar = () => {
   return (
@@ -10,7 +11,9 @@ const NavBar = () => {
             <li><a href=" ">Tipos de Cortinas</a></li>
             <li><a href=" ">Como medir e Instalar</a></li>
             <li><a href=" ">Contacto</a></li>
-            <li><a className='comprar' href=" ">COMPRÁ AHORA!</a></li>
+            <li><a className='comprar' href=" ">COMPRÁ AHORA! </a></li>
+            <CartWidget />
+        
         </ul>
     </div>
   )
