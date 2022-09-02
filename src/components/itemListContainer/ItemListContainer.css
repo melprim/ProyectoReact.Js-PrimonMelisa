@@ -1,0 +1,9 @@
+.saludo {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.divContador{
+    display: flex;
+    justify-content: center;
+}

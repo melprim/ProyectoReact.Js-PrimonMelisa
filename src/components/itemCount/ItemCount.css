@@ -1,0 +1,26 @@
+.contador {
+    text-align: center;
+    width: 200px;
+    height: 250px;
+    background-color: #d495a6;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    padding: 15px;
+}
+
+.controles{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2rem 0;
+    align-items: center;
+
+}
+.numeroContador{
+    width: 100px;
+    margin-bottom: 0;
+  
+
+}

@@ -1,6 +1,7 @@
-import React from 'react'
-import logo from '../assets/LOGO CORTINAS.png'
-import CartWidget from './CartWidget'
+import React from 'react';
+import logo from '../../assets/LOGO CORTINAS.png';
+import '../navBar/NavBar.css';
+import CartWidget from '../cardwidget/CartWidget';
 
 const NavBar = () => {
   return (
