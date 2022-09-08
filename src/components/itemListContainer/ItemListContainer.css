@@ -3,7 +3,17 @@
     text-align: center;
 }
 
-.divContador{
-    display: flex;
-    justify-content: center;
+.contenedorProductos {
+    margin: 50px 10px;
 }
+
+.listaProductos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+
+
