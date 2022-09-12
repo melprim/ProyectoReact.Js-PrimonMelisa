@@ -1,11 +1,7 @@
 import React from 'react';
-import ItemCount from '../itemCount/ItemCount';
 import "./Item.css"
 
-const Item = ({id, tipoCortina, tipoTela, color, ancho, alto, precio, stock, imagen}) => {
-    function onAdd(contador){
-        alert(`Agregaste ${contador} cortinas al carrito`) 
-    }
+const Item = ({id, tipoCortina, tipoTela, color, ancho, alto, precio, stock, imagen }) => {
 
     return (
         <div className='divContenedor' id={id}>
@@ -17,8 +13,8 @@ const Item = ({id, tipoCortina, tipoTela, color, ancho, alto, precio, stock, ima
                 <p>Precio: ${precio}</p>
                 <p>Disponibles: {stock} unidades</p>
             </div>
-            <div className='divContador'>
-                <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
+            <div className='botonDetail'>
+                <button onClick={()=>{console.log("hiciste click")}}>Ver más detalles</button>
             </div>
         </div>
     )

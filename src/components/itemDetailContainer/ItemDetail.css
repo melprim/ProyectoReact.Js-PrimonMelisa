@@ -1,13 +1,13 @@
-.divContenedor{
+.divContenedor {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px;
     border: 2px solid pink;
     border-radius: 12px;
 }
 
-img{
+img {
     max-width: 100%;
     height: auto;
     border-radius: 12px;
@@ -23,20 +23,5 @@ h2 {
 p {
     text-align: center;
     margin: 0;
-    
+
 }
-.botonDetail {
-    display: flex;
-    justify-content: center;
-}
-    
-
-button {
-    background-color: pink;
-    border: 0;
-    padding: 5px 10px;
-    border-radius: 8px;
-}
-
-
-
