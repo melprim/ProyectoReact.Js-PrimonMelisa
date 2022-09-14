@@ -1,20 +1,19 @@
 import React from 'react';
 import logo from '../../assets/LOGO CORTINAS.png';
 import '../navBar/NavBar.css';
-import CartWidget from '../cardwidget/CartWidget';
+import { Link} from 'react-router-dom';
+import NavBarDropdown from './NavBarDropdown';
 
 const NavBar = () => {
   return (
     <div className='contenedor'>
-        <img className='imgLogo' src = {logo} alt='imagenlogo'/>
+        <Link to="/"><img className='imgLogo' src = {logo} alt='imagenlogo'/></Link>
         <ul>
-            <li><a href=" ">Home</a></li>
-            <li><a href=" ">Tipos de Cortinas</a></li>
-            <li><a href=" ">Como medir e Instalar</a></li>
-            <li><a href=" ">Contacto</a></li>
-            <li><a className='comprar' href=" ">COMPRÁ AHORA! </a></li>
-            <CartWidget />
-        
+            <li><Link to="/">Home</Link></li>
+            <li><NavBarDropdown/></li>
+            <li><Link to="/medirEInstalar/">Como medir e Instalar</Link></li>
+            <li><Link to="/contacto/">Contacto</Link></li>
+            <Link to="/carrito/"><i className="fas fa-shopping-cart icono-carrito"></i></Link>  
         </ul>
     </div>
   )

@@ -37,3 +37,11 @@ ul {
 .imgLogo {
     height: 100%;
 }
+
+.icono-carrito {
+    font-size: 25px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+}

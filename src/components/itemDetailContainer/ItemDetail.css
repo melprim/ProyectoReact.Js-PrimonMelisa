@@ -1,10 +1,12 @@
-.divContenedor {
+.divContenedorDetail {
+    height: auto;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     padding: 10px;
     border: 2px solid pink;
     border-radius: 12px;
+    margin: 0 2rem;
 }
 
 img {
@@ -24,4 +26,8 @@ p {
     text-align: center;
     margin: 0;
 
+}
+
+.contenerImgDetalle{
+    width: 300px;
 }

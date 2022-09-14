@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./Item.css"
 
 const Item = ({id, tipoCortina, tipoTela, color, ancho, alto, precio, stock, imagen }) => {
@@ -14,7 +15,7 @@ const Item = ({id, tipoCortina, tipoTela, color, ancho, alto, precio, stock, ima
                 <p>Disponibles: {stock} unidades</p>
             </div>
             <div className='botonDetail'>
-                <button onClick={()=>{console.log("hiciste click")}}>Ver más detalles</button>
+                <Link to={`/detalleCortina/${id}`}><button>Ver más detalles</button></Link>
             </div>
         </div>
     )

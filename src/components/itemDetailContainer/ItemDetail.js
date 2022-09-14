@@ -1,23 +1,39 @@
 import React from 'react'
 import ItemCount from '../itemCount/ItemCount';
 import './ItemDetail.css'
+import { toast, ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const ItemDetail = ({cortina}) => {
-   function onAdd(contador){
-        alert(`Agregaste ${contador} cortinas al carrito`) 
+const ItemDetail = ({id, imagen, tipoCortina, tipoTela, precio, descripcion, stock}) => {
+    function onAdd(contador){
+        toast(`Agregaste ${contador} cortina(s) al carrito`, {
+        position: "top-right",
+        autoClose: 1700,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
     }
-  return (
-    <div className='divContenedor' id={cortina.id}>
-            <div>
-                <img src={cortina.imagen} alt=" " />
-                <h2>Cortina: {cortina.tipoCortina} {cortina.tipoTela}</h2>
-                <p>Precio: $ {cortina.precio}</p>
-                <p>Descripcion: {cortina.descripcion} </p>
-                <p>Disponibles: {cortina.stock} unidades</p>
+    
+        //alert(`Agregaste ${contador} cortinas al carrito`)} 
+    
+    return (
+    <div className='divContenedorDetail' id={id}>
+        <div className='contenerImgDetalle'>
+            <img src={imagen} alt=" " />
+        </div>
+        <div>
+            <div className='detalle'>
+                <h2>Cortina: {tipoCortina} {tipoTela}</h2>
+                <p>Precio: $ {precio}</p>
+                <p>Descripcion: {descripcion} </p>
+                <p>Disponibles: {stock} unidades</p>
+                <ItemCount stock={stock} onAdd={onAdd}/>
+                <ToastContainer/>
             </div>
-            <div>
-                <ItemCount stock={cortina.stock} initial={1} onAdd={onAdd}/>
-            </div>
+        </div>
     </div>
     )
 }
