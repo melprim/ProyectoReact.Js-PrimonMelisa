@@ -10,7 +10,6 @@ const ItemListContainer = () => {
   const[cortinasList, setCortinasList] = useState([])
 
   const{tiposId} = useParams()
-  console.log(tiposId)
   useEffect(()=> {
     const getCortinas = () => new Promise (res =>{
         setTimeout(()=>{

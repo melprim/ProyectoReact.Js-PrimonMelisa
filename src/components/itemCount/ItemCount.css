@@ -10,17 +10,17 @@
 }
 
 .controles {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    margin: 2rem 0;
+    margin-bottom: 1rem ;
     align-items: center;
 
 }
 
 .numeroContador {
-    width: 100px;
+    border: 1px solid #212529;
+    border-radius: 5px;
+    padding: 4px;
     margin-bottom: 0;
-
-
 }

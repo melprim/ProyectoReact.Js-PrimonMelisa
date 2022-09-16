@@ -28,11 +28,12 @@ p {
 .botonDetail {
     display: flex;
     justify-content: center;
+    margin: 2rem 0;
 }
     
 
 button {
-    background-color: pink;
+    background-color: rgb(216, 143, 154);
     border: 0;
     padding: 5px 10px;
     border-radius: 8px;

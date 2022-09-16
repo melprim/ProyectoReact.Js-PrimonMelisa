@@ -1,6 +1,5 @@
 import {React, useEffect, useState } from 'react';
 import ItemDetail from './ItemDetail';
-import './ItemDetailContainer.css'
 import cortinas from '../../data/data';
 import {useParams} from 'react-router-dom';
 
@@ -18,7 +17,7 @@ const ItemDetailContainer = () => {
     }, [id] )
 
   return (
-        <div className='contenedorItemDetail'>
+        <div className='container my-5'>
             {cortinaDetail && <ItemDetail {...cortinaDetail} />}
         </div>
   )
