@@ -7,7 +7,7 @@ const CarritoProvider = (props) => {
   const [carrito, setCarrito] = useState ([])
 
   const agregarAlCarrito = (id, quantity, tipoCortina, precio) => {
-        // si existe la cortina en el carrito cambiamos cantidad, si no pusheamos la "nueva" cortina (que aún no esta en el array).
+        //Si existe la cortina en el carrito cambiamos cantidad, si no pusheamos la "nueva" cortina (que aún no esta en el array).
         if(carrito.some(cortinaEnCarrito => cortinaEnCarrito.id === id)){
             let cortinaExistente = (carrito.find(cortinaEnCarrito => cortinaEnCarrito.id === id))
             cortinaExistente.quantity += quantity
