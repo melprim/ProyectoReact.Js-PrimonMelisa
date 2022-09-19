@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# Proyecto e-commerce con React-JS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es Mi Proyecto E-commerce desarrollado en el marco del Curso React-js en CodR House. 
 
-## Available Scripts
+## Idea / Enfoque del proyecto
 
-In the project directory, you can run:
+La idea es crear un sitio web con la misma temática utilizada en mi proyecto final de JS: https://melprim.github.io/ProyectoFinal-JavaScript_PRIMON-MELISA/ : CORTINAS DECORATIVAS de MelisaDecoScreen (logo de mi autoría)
 
-### `npm start`
+El sitio consta de 4 paginas principales que juntas componen un sitio Web completo, informativo, instructivo y e-commerce. Las páginas son: HOME con secciones de imagen de presentacion, quienes somos, datos de contacto (redes... correo... etc), COMO MEDIR E INSTALAR con algunos videos tutoriales importados desde youtube, CONTACTO con un formulario para enviar consultas y NUESTRAS CORTINAS donde se muestran todas las cortinas disponibles a la venta. Esta última, corresponde a la E-commerce en si, pudiendo realizar filtros por categoria (por TIPO DE CORTINA), ver detalles de cada una, seleccionar cantidad, agregar al carrito, eliminar unidad, vaciar el carrito y concretar la compra. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Librerías de React utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+React-Boostrap para algunos estilos.
 
-### `npm test`
+React-Toastify para mostrar la alerta cuando el cliente añade una cortina al carrito.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React-router-dom para una óptima navegabilidad entre componentes. 
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Y dentro de componentes de React: useState, useEffect y useParams.
