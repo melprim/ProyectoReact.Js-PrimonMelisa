@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import ItemCount from '../itemCount/ItemCount';
 import './ItemDetail.css'
 import { toast, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ItemAgregado from './ItemAgregado';
+import { CarritoContext } from '../../context/CarritoContext';
 
 const ItemDetail = ({id, imagen, tipoCortina, tipoTela, precio, descripcion, stock, ancho, alto}) => {
+    const {agregarAlCarrito} = useContext(CarritoContext)
     const [cambiarComp, setCambiarComp] = useState(true)
     function onAdd(contador){
+        agregarAlCarrito(id, contador, tipoCortina, precio)
         setCambiarComp(false)
         toast(`Agregaste ${contador} cortina(s) al carrito`, {
         position: "top-right",
@@ -29,9 +32,8 @@ const ItemDetail = ({id, imagen, tipoCortina, tipoTela, precio, descripcion, sto
             <div className='detalle'>
                 <h2><strong className='fs-2'>Cortina: {tipoCortina} {tipoTela}</strong></h2>
                 <p className='fs-3'><strong >Precio:</strong> $ {precio}</p>
-                <p><strong>DESCRIPCION:</strong> {descripcion} 
-                    <p><strong>Dimensiones:</strong> {ancho}cm de ancho x {alto}cm de alto </p>
-                </p>
+                <p><strong>DESCRIPCION:</strong> {descripcion}</p>
+                <p><strong>Dimensiones:</strong> {ancho}cm de ancho x {alto}cm de alto </p>
                 <p><strong>Disponibles:</strong> {stock} unidades</p>
             </div>
             <div className='contenedorContador'>
