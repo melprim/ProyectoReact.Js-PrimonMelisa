@@ -39,9 +39,14 @@ ul {
 }
 
 .icono-carrito {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
     font-size: 25px;
-    background-color: white;
+    background-color: #DCD4C9;
     border-radius: 10px;
     padding: 10px;
     color: black;
 }
+
+

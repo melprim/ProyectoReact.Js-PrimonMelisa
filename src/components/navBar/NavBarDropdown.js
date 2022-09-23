@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const NavBarDropdown = (tipoId) => {
     return (
     <div className="dropdown">
-        <button className="btn dropdown-toggle p-0 border-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><Link to="/cortinas/"> Nuestras Cortinas</Link></button>
+        <button className="btn dropdown-toggle p-0 border-0 shadow-none" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><Link to="/cortinas/"> Nuestras Cortinas</Link></button>
         
         <ul className="dropdown-menu h-auto" aria-labelledby="dropdownMenuButton1">
             <Link to="/cortinas/" className="dropdown-item">Todas</Link>

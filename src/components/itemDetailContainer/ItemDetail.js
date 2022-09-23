@@ -10,7 +10,7 @@ const ItemDetail = ({id, imagen, tipoCortina, tipoTela, precio, descripcion, sto
     const {agregarAlCarrito} = useContext(CarritoContext)
     const [cambiarComp, setCambiarComp] = useState(true)
     function onAdd(contador){
-        agregarAlCarrito(id, contador, tipoCortina, precio)
+        agregarAlCarrito(id, imagen, precio, tipoCortina, tipoTela, contador)
         setCambiarComp(false)
         toast(`Agregaste ${contador} cortina(s) al carrito`, {
         position: "top-right",
