@@ -14,7 +14,7 @@ const ItemDetail = ({id, imagen, tipoCortina, tipoTela, precio, descripcion, sto
         setCambiarComp(false)
         toast(`Agregaste ${contador} cortina(s) al carrito`, {
         position: "top-right",
-        autoClose: 1700,
+        autoClose: 800,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,

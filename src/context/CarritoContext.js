@@ -8,8 +8,6 @@ const CarritoProvider = (props) => {
     const [totalCarrito, setTotalCarrito] = useState (0)
     const [contadorCarrito, setContadorCarrito] = useState (0)
 
-
-
     const actualizarContadorCarrito = () => {
         //const cantidadPorCortina = carrito.length
         //setContadorCarrito (cantidadPorCortina)
@@ -17,19 +15,18 @@ const CarritoProvider = (props) => {
         setContadorCarrito(cantidadPorCortina.reduce((acumulador, cantidadPorCortina) => acumulador + cantidadPorCortina, 0))
     }
 
-
     const actualizarMontoTotalCarrito = () => {
       const totalPorCortina = carrito.map(cortinaEnCarrito => cortinaEnCarrito.precioTotal) 
       setTotalCarrito(totalPorCortina.reduce((acumulador, totalesPorCortina) => acumulador + totalesPorCortina, 0))
   }
 
 
-  const agregarAlCarrito = (id, imagen, precio, tipoCortina, tipoTela, contador) => {
+    const agregarAlCarrito = (id, imagen, precio, tipoCortina, tipoTela, contador) => {
         //Si existe la cortina en el carrito cambiamos cantidad, si no pusheamos la "nueva" cortina (que aún no esta en el array).
         if(carrito.some(cortinaEnCarrito => cortinaEnCarrito.id === id)){
             let cortinaExistente = (carrito.find(cortinaEnCarrito => cortinaEnCarrito.id === id))
             cortinaExistente.quantity += contador
-            cortinaExistente.precioTotal = cortinaExistente.precio * contador
+            cortinaExistente.precioTotal += cortinaExistente.precio * contador
         }else{
             const auxCarrito = carrito
             let nuevaCortina = {
