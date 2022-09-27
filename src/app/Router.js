@@ -19,7 +19,7 @@ const Router = () => (
                 <Route path="/cortinas/:tiposId" element={<Tipos/>}/>
                 <Route path="/medirEInstalar/" element={<MedirEInstalar/>}/>
                 <Route path="/contacto/" element={<Contacto/>}/>
-                <Route path="/detalleCortina/:id" element={<ItemDetailContainer/>}/>
+                <Route path="/detalleCortina/:detalleId" element={<ItemDetailContainer/>}/>
                 <Route path='/carrito/' element={<Carrito/>} />
                 <Route path="*" element={<div>Error 404</div> }/>
             </Route>

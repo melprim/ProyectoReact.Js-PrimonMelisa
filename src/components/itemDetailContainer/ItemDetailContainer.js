@@ -1,20 +1,18 @@
 import {React, useEffect, useState } from 'react';
 import ItemDetail from './ItemDetail';
-import cortinas from '../../data/data';
 import {useParams} from 'react-router-dom';
+import { getItemById } from '../../app/api';
 
 const ItemDetailContainer = () => {
   const [cortinaDetail, setCortinaDetail] = useState();  
- 
-  const {id} = useParams ()
+  const {detalleId} = useParams ()
 
-  useEffect(() => {
-    const getCortinaDetail = () => new Promise ((res, err) =>{
-    setTimeout(()=>res(cortinas.find(cortinas=>cortinas.id === Number(id))),1500)
-    })
-      getCortinaDetail()
-      .then(cortinaDetail => setCortinaDetail(cortinaDetail))
-    }, [id] )
+
+  useEffect(()=>{
+    getItemById(detalleId)
+    .then(cortinaDetail => setCortinaDetail(cortinaDetail))
+  }, [detalleId])
+
 
   return (
         <div className='container my-5'>

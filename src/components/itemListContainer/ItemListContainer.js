@@ -1,27 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import '../itemListContainer/ItemListContainer.css';
 import ItemList from './ItemList';
-import cortinas from '../../data/data';
 import { useParams } from 'react-router-dom';
+import { getItems } from '../../app/api';
 
 
 const ItemListContainer = () => {
 
   const[cortinasList, setCortinasList] = useState([])
-
   const{tiposId} = useParams()
+  
   useEffect(()=> {
-    const getCortinas = () => new Promise (res =>{
-        setTimeout(()=>{
-            res(cortinas)
-        }, 1500)
-    })  
-
     if(tiposId){
-    getCortinas() 
-    .then(res => setCortinasList(res.filter((res) => res.tipoCortina === tiposId)))
+      getItems() 
+      .then(res => setCortinasList(res.filter((res) => res.tipoCortina === tiposId)))
     }else{
-      getCortinas() 
+      getItems() 
       .then(res => setCortinasList(res))
     }  
   }, [tiposId])
