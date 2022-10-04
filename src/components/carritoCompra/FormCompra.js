@@ -42,7 +42,6 @@ const FormCompra = () => {
                 progress: undefined,
             });
         }else{
-            delete comprador.confirmarEmail
             const productosComprados = carrito.map(e=>{return{id:e.id, nombre:e.tipoCortina + e.tipoTela, cantidad:e.quantity, precioTotal:e.precioTotal}})
             const fechaCompra = new Date()
             const totalCompra = totalCarrito
