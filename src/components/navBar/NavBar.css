@@ -8,6 +8,7 @@ a:hover {
     color: aquamarine;
 }
 
+
 ul {
     display: flex;
     flex-direction: row;
@@ -47,6 +48,12 @@ ul {
     border-radius: 10px;
     padding: 10px;
     color: black;
+}
+
+.dropdown-toggle::after{
+    margin-left: 10px;
+    font-size: 22px;
+    color: white;
 }
 
 

@@ -2,10 +2,10 @@ import React, { useContext} from 'react'
 import { CarritoContext } from '../../context/CarritoContext'
 import './CarritoItem.css'
 
-const CarritoItem = ({id, tipoCortina, tipoTela, precio, quantity, precioTotal, imagen}) => {
+const CarritoItem = ({detalleId, tipoCortina, tipoTela, precio, quantity, precioTotal, imagen}) => {
     const {eliminarCortinaCarrito} = useContext (CarritoContext)
   return (
-    <div id={id} className='contenedorItemCarrito' >
+    <div id={detalleId} className='contenedorItemCarrito' >
         <div>
             <img src={imagen} alt=" " className='imagenItem'/>
         </div>
@@ -19,7 +19,7 @@ const CarritoItem = ({id, tipoCortina, tipoTela, precio, quantity, precioTotal, 
             </div>
         </div>
         <div>
-            <button onClick={()=>eliminarCortinaCarrito(id)}><i className="fas fa-trash-alt"></i></button>
+            <button onClick={()=>eliminarCortinaCarrito(detalleId)}><i className="fas fa-trash-alt"></i></button>
         </div>
     </div>
   )

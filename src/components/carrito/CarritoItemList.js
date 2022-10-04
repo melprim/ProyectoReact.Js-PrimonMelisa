@@ -19,7 +19,9 @@ const CarritoItemList = () => {
                 <Link to="/cortinas/">
                     <button>Seguir Comprando</button>
                 </Link>
-                <button>Finalizar Compra</button>
+                <Link to="/carrito/Compra" >
+                    <button>Finalizar Compra</button>
+                </Link>
             </div>
 
         </div>

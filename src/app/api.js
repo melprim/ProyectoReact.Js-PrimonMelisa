@@ -3,7 +3,7 @@ import { db } from './firebase';
 
 // CREATE - crear un objeto
 export const createItem = async(obj) => {
-    const colRef = collection(db, 'Cortinas');
+    const colRef = collection(db, 'Ordenes de compra');
     const data = await addDoc(colRef, obj);
     return data.id;
 }
@@ -18,7 +18,7 @@ export const updateItem = async (id, obj) => {
 export const getItems= async ()  => {
     const colRef = collection(db, 'Cortinas'); //accedo a la coleccion que quiero consultar
     const result = await getDocs(query(colRef));
-    return getArrayFromCollection(result);// de la coleccion que me devuelve firebase,lo extraigo y refromateo en un array de objetos 
+    return getArrayFromCollection(result);// de la coleccion que me devuelve firebase,lo extraigo y reformateo en un array de objetos 
 }
 
 // READ WITH WHERE

@@ -6,7 +6,7 @@ const ItemList = ({cortinasList}) => {
 
   return (
     <>
-        {!cortinasList ? <Loader/> : cortinasList.map((cortinas) => <Item key={cortinas.id} {...cortinas}/>)}
+        {!cortinasList ? <Loader/> : cortinasList.map((cortinas) => <Item key={cortinas.detalleId} {...cortinas}/>)}
     </>
   )
 }

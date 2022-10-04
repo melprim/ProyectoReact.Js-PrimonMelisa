@@ -6,13 +6,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import ItemAgregado from './ItemAgregado';
 import { CarritoContext } from '../../context/CarritoContext';
 
-const ItemDetail = ({id, imagen, tipoCortina, tipoTela, precio, descripcion, stock, ancho, alto}) => {
+const ItemDetail = ({detalleId, imagen, tipoCortina, tipoTela, precio, descripcion, stock, ancho, alto}) => {
     const {agregarAlCarrito} = useContext(CarritoContext)
     const [cambiarComp, setCambiarComp] = useState(true)
     function onAdd(contador){
-        agregarAlCarrito(id, imagen, precio, tipoCortina, tipoTela, contador)
+        agregarAlCarrito(detalleId, imagen, precio, tipoCortina, tipoTela, contador)
         setCambiarComp(false)
-        toast(`Agregaste ${contador} cortina(s) al carrito`, {
+        toast.success(`Agregaste ${contador} cortina(s) al carrito`, {
         position: "top-right",
         autoClose: 800,
         hideProgressBar: false,
@@ -24,7 +24,7 @@ const ItemDetail = ({id, imagen, tipoCortina, tipoTela, precio, descripcion, sto
     }
     
     return (
-    <div className=' divContenedorDetail' id={id}>
+    <div className=' divContenedorDetail' id={detalleId}>
         <div className='contenerImgDetalle'>
             <img src={imagen} alt=" " />
         </div>

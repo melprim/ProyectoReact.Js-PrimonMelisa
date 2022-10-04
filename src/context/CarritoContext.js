@@ -2,11 +2,12 @@ import { createContext, useState } from 'react'
 
 const CarritoContext = createContext()
 
-const CarritoProvider = (props) => {
+const CarritoProvider = ({children}) => {
     //Almaceno en estados
     const [carrito, setCarrito] = useState ([])
     const [totalCarrito, setTotalCarrito] = useState (0)
     const [contadorCarrito, setContadorCarrito] = useState (0)
+
 
     const actualizarContadorCarrito = () => {
         //const cantidadPorCortina = carrito.length
@@ -21,16 +22,17 @@ const CarritoProvider = (props) => {
   }
 
 
-    const agregarAlCarrito = (id, imagen, precio, tipoCortina, tipoTela, contador) => {
+    const agregarAlCarrito = (detalleId, imagen, precio, tipoCortina, tipoTela, contador) => {
         //Si existe la cortina en el carrito cambiamos cantidad, si no pusheamos la "nueva" cortina (que aún no esta en el array).
-        if(carrito.some(cortinaEnCarrito => cortinaEnCarrito.id === id)){
-            let cortinaExistente = (carrito.find(cortinaEnCarrito => cortinaEnCarrito.id === id))
+        if(carrito.some(cortinaEnCarrito => cortinaEnCarrito.id === detalleId)){
+            let cortinaExistente = (carrito.find(cortinaEnCarrito => cortinaEnCarrito.id === detalleId))
             cortinaExistente.quantity += contador
             cortinaExistente.precioTotal += cortinaExistente.precio * contador
+            console.log(carrito)
         }else{
             const auxCarrito = carrito
             let nuevaCortina = {
-                id: id,
+                id: detalleId,
                 imagen: imagen,
                 precio: precio,
                 quantity: contador,
@@ -48,9 +50,9 @@ const CarritoProvider = (props) => {
 
 
     // Esta sería la funcion removeItem
-    const eliminarCortinaCarrito = (id) => {
+    const eliminarCortinaCarrito = (detalleId) => {
         const auxCarrito = carrito
-        auxCarrito.splice((auxCarrito.findIndex(cortina => cortina.id === id)), 1)
+        auxCarrito.splice((auxCarrito.findIndex(cortina => cortina.id === detalleId)), 1)
         setCarrito(auxCarrito)
         actualizarMontoTotalCarrito()
         actualizarContadorCarrito()
@@ -65,8 +67,8 @@ const CarritoProvider = (props) => {
     }
 
     return(
-        <CarritoContext.Provider value = {{carrito, agregarAlCarrito, eliminarCortinaCarrito, vaciarCarrito, totalCarrito, contadorCarrito}}>
-        {props.children}
+        <CarritoContext.Provider value = {{carrito, agregarAlCarrito, eliminarCortinaCarrito, vaciarCarrito, totalCarrito, contadorCarrito, setCarrito}}>
+        {children}
         </CarritoContext.Provider>
     )
 
