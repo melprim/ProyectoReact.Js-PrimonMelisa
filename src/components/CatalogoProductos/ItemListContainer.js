@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../itemListContainer/ItemListContainer.css';
+import './ItemListContainer.css';
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
 import { getItems } from '../../app/api';
@@ -24,12 +24,14 @@ const ItemListContainer = () => {
   }, [tiposId])
 
   return (
-    <div className='contenedorProductos'>
-      <h1 className='saludo'>{titulo}</h1>
-      <div className='listaProductos'>
-        {<ItemList cortinasList={cortinasList} />}
+    <> 
+      <div className='contenedorProductos'>
+        <h1 className='tituloPrincipal'>{titulo}</h1>
+        <div className='listaProductos'>
+          {<ItemList cortinasList={cortinasList} />}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

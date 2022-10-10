@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './NavBar.css'
 
 const NavBarDropdown = (tipoId) => {
     return (
@@ -11,7 +12,7 @@ const NavBarDropdown = (tipoId) => {
             <li><hr className="dropdown-divider" /></li>
             <Link to="/cortinas/Roller/" className="dropdown-item">Roller</Link>
             <Link to="/cortinas/Bandas Verticales/" className="dropdown-item">Bandas Verticales</Link>
-            <Link to="/cortinas/Duo/" className="dropdown-item">Enrollables Duo</Link>
+            <Link to="/cortinas/Duo/" className="dropdown-item">Duo</Link>
         </ul>
     </div>
     )

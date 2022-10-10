@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import ItemCount from '../itemCount/ItemCount';
+import ItemCount from './ItemCount/ItemCount';
 import './ItemDetail.css'
 import { toast, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

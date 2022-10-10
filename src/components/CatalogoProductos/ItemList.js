@@ -1,6 +1,6 @@
 import React from 'react'
-import Item from '../item/Item'
-import Loader from '../loader/Loader'
+import Item from './Item'
+import Loader from '../Loader/Loader'
 
 const ItemList = ({cortinasList}) => {
 

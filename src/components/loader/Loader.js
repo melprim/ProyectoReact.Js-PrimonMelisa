@@ -1,6 +1,6 @@
 import React from 'react'
 import loader from '../../assets/Spinner-1s-200px.svg'
-import '../loader/Loader.css'
+import './Loader.css'
 
 const Loader = () => {
   return (

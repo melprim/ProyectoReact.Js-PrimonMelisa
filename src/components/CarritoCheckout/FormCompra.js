@@ -61,7 +61,7 @@ const FormCompra = () => {
 
     return (
     <div className='container'>
-        <h1 className='saludo'>¡VAMOS A COMPRAR!</h1>
+        <h1 className='tituloPrincipal'>¡VAMOS A COMPRAR!</h1>
         <div className='contenedorForm'>
             <form onSubmit={eventoSubmit}>
                 <h2>Datos del comprador</h2>
@@ -93,7 +93,9 @@ const FormCompra = () => {
                     value={confirmarEmail || ""}
                     onChange={eventoChangeInput}
                 />
-                <button className='mt-5 mb-3' type='submit' disabled={carrito.length > 0 ? null : true}>Finalizar compra</button>
+                <div>
+                    <button className='mt-5 mb-3' type='submit' disabled={carrito.length > 0 ? null : true}>Finalizar compra</button>
+                </div> 
             </form>
             <ToastContainer/>
         </div>
