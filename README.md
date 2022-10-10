@@ -20,5 +20,5 @@ Utilizada para mostrar la alerta de finalización de compra. Aparece un modal co
 Utilizada para implementar algunos estilos.
 
 ### React-router-dom
-Indispensable para una optia navegabilidad del usuario dentro de la aplicación.
+Indispensable para una óptima navegabilidad del usuario dentro de nuestra aplicación.
 
