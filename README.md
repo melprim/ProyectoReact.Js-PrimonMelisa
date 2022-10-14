@@ -27,3 +27,5 @@ Indispensable para una óptima navegabilidad del usuario dentro de nuestra aplic
 ## Conexión a FireBase
 Para la solicitud y envio de datos, se conectó la aplicación a una base de datos remota. Se solicita el catálogo de cortinas y se envían los datos del la compra. 
 
+
+![GIF-ProyectoReactJs-PrimonMelisa](https://user-images.githubusercontent.com/104146977/195745436-2ea3d078-6630-4f0e-934e-bc1d9d93a4fa.gif)
