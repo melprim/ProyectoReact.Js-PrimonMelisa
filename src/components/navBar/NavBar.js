@@ -3,7 +3,7 @@ import logo from '../../assets/LOGO CORTINAS.png';
 import './NavBar.css';
 import { Link} from 'react-router-dom';
 import NavBarDropdown from './NavBarDropdown';
-import CardWidget from './CartWidget/CardWidget';
+import CardWidget from './cartWidget/CardWidget';
 
 const NavBar = () => {
   return (

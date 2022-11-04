@@ -1,12 +1,12 @@
 import React from 'react'
-import ItemDetailContainer from '../components/DetalleProductos/ItemDetailContainer';
+import ItemDetailContainer from '../components/detalleProductos/ItemDetailContainer';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Home from '../pages/Home';
 import Layout from './Layout';
-import Carrito from '../components/Carrito/Carrito';
+import Carrito from '../components/carrito/Carrito';
 import { CarritoProvider } from '../context/CarritoContext';
-import ItemListContainer from '../components/CatalogoProductos/ItemListContainer';
-import FormCompra from '../components/CarritoCheckout/FormCompra';
+import ItemListContainer from '../components/catalogoProductos/ItemListContainer';
+import FormCompra from '../components/carritoCheckout/FormCompra';
 
 const Router = () => ( 
 <CarritoProvider>
