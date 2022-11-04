@@ -10,6 +10,8 @@ El sitio está diseñado para una óptima navegabilidad del usuario, brindándol
 
 Inicia en un "HOME" donde se presenta la marca y desde la cual se puede acceder a la TIENDA-ONLINE. Esta última conforma la página "NUESTRAS CORTINAS" donde se muestran todas las cortinas disponibles a la venta. Corresponde a la E-commerce en si, pudiendo realizar filtros por categoria (por TIPO DE CORTINA), ver detalles de cada una, seleccionar cantidad y agregar al carrito. Dentro del carrito es posible vaciarlo, eliminar una cortina y concretar la compra. 
 
+![GIF-ProyectoReactJs-PrimonMelisa](https://user-images.githubusercontent.com/104146977/195745436-2ea3d078-6630-4f0e-934e-bc1d9d93a4fa.gif)
+
 ## Librerías utilizadas
 
 ### React-Toastify 
@@ -26,4 +28,6 @@ Indispensable para una óptima navegabilidad del usuario dentro de nuestra aplic
 
 ## Conexión a FireBase
 Para la solicitud y envio de datos, se conectó la aplicación a una base de datos remota. Se solicita el catálogo de cortinas y se envían los datos del la compra. 
+
+
 
